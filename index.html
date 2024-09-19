@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Love me</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+        width: 100%;
+        margin: 5rem;
+      }
+      button {
+        text-align: center;
+      }
+      .button-wrapper {
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+      }
+      .button-wrapper button {
+        width: 6rem;
+        height: 2rem;
+        padding: 1.5rem;
+        border: none;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        font-weight: 600;
+        font-size: 1.2rem;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      #yesButton {
+        background-color: rgb(224, 165, 165);
+        color: #030303;
+      }
+      #noButton {
+        background-color: rgb(230, 18, 18);
+        color: #fcf5f5;
+      }
+
+      @media (max-width: 768px) {
+        .button-wrapper button {
+          font-size: 14px;
+        }
+
+        h1 {
+          font-size: 1.8rem;
+        }
+
+        .button-wrapper button {
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .button-wrapper button {
+          font-size: 12px;
+        }
+        h1 {
+          font-size: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="response">Do you love me?</h1>
+      <div class="button-wrapper">
+        <button id="yesButton">Yes</button>
+        <button id="noButton">No</button>
+      </div>
+    </div>
+
+    <script>
+      const yesButton = document.getElementById("yesButton");
+      const noButton = document.getElementById("noButton");
+      const responseDiv = document.getElementById("response");
+      // Function to move button to random positions
+      function moveButtonRandomly(button) {
+        const randomTop = Math.floor(Math.random() * 500) - 100;
+        const randomLeft = Math.floor(Math.random() * 500) - 100;
+        button.style.position = "relative";
+        button.style.top = randomTop + "px";
+        button.style.left = randomLeft + "px";
+      }
+
+      // Event listener for 'Yes' button
+      yesButton.addEventListener("click", function () {
+        responseDiv.innerHTML = "I Love you too! ❤️";
+      });
+
+      noButton.addEventListener("mouseover", function () {
+        moveButtonRandomly(noButton);
+      });
+    </script>
+  </body>
+</html>
