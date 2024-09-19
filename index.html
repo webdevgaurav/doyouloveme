@@ -22,31 +22,33 @@
       .container {
         display: flex;
         flex-direction: column;
-        height: 100%;
         align-items: center;
         width: 100%;
-        margin: 5rem;
-      }
-      button {
+        max-width: 500px;
         text-align: center;
+        margin: 2rem auto;
+      }
+      h1 {
+        margin-bottom: 2rem;
       }
       .button-wrapper {
-        margin-top: 2rem;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         gap: 2rem;
+        margin-top: 1rem;
       }
       .button-wrapper button {
         width: 6rem;
-        height: 2rem;
-        padding: 1.5rem;
+        height: 3rem;
+        padding: 1rem;
         border: none;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         font-weight: 600;
         font-size: 1.2rem;
         border-radius: 4px;
         cursor: pointer;
+        position: relative;
       }
       #yesButton {
         background-color: rgb(224, 165, 165);
@@ -59,21 +61,19 @@
 
       @media (max-width: 768px) {
         .button-wrapper button {
-          font-size: 14px;
+          font-size: 1rem;
+          padding: 0.75rem;
         }
 
         h1 {
           font-size: 1.8rem;
         }
-
-        .button-wrapper button {
-          text-align: center;
-        }
       }
 
       @media (max-width: 480px) {
         .button-wrapper button {
-          font-size: 12px;
+          font-size: 0.9rem;
+          padding: 0.5rem;
         }
         h1 {
           font-size: 1.5rem;
