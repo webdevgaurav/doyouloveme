@@ -22,7 +22,7 @@ function moveButtonRandomly(button) {
 
 friendButton.addEventListener("click", function () {
   greetingDiv.innerHTML = "Hello Friend! 👋";
-  responseDiv.innerHTML = "Buy me a something!!! Asshole!! 😁😁";
+  responseDiv.innerHTML = "Buy me something!!! Asshole!! 😁😁";
   yesFlameButton.style.display = "none";
   primaryView.style.display = "none";
   secondaryView.style.display = "block";
